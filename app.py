@@ -11,7 +11,7 @@ def init():
     global tokenizer
 
     print("loading to CPU...")
-    model = GPTJForCausalLM.from_pretrained(modelname, revision="float16", torch_dtype=torch.float16, low_cpu_mem_usage=True)
+    model = GPTJForCausalLM.from_pretrained(modelname, torch_dtype=torch.float16, low_cpu_mem_usage=True)
     print("done")
 
     # conditionally load to GPU
