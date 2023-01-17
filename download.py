@@ -12,7 +12,7 @@ def download_model():
     # do a dry run of loading the huggingface model, which will download weights
     print("downloading model...")
     GPTJForCausalLM.from_pretrained(
-        modelname, revision="float16", torch_dtype=torch.float16, low_cpu_mem_usage=True
+        modelname, torch_dtype=torch.float16, low_cpu_mem_usage=True
     )
     print("done")
 
